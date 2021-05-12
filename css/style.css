@@ -18,6 +18,7 @@ body {
     font-size: 25px;
     padding-bottom: 5px;
 }
+
 .subHeader {
     font-weight: bold;
     text-align: left;
@@ -47,6 +48,8 @@ body {
     flex-grow: 1;
     margin: 5px;
     border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .toDoList__form--taskButton {
@@ -56,5 +59,13 @@ body {
     border: none;
     padding: 5px;
     margin: 5px;
+    border-radius: 5px;
 }
 
+.toDoList__form--taskButton:hover{
+    background-color: hsl(180, 100%, 30%);
+}
+
+.toDoList__tasks{
+
+}
