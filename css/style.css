@@ -8,4 +8,51 @@ html {
 
 body {
     font-family: 'Mukta', sans-serif;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    margin: 5px;
 }
+
+.header {
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+.subHeader {
+    font-weight: bold;
+    text-align: start;
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 10px;
+}
+
+.toDoList {
+    display: grid;
+    grid-template-rows: 2;
+    height: auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.toDoList__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.toDoList__form--newTask {
+    flex-basis: 400px;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.toDoList__form--taskButton {
+    flex-grow: 1;
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 2px;
+    margin: 5px;
+}
+
