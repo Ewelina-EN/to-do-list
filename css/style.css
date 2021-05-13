@@ -47,6 +47,12 @@ body {
     margin: 5px;
 }
 
+@media(max-width:767px) {
+    .toDoList__form {
+        grid-template-columns: 1fr;
+    }
+}
+
 .toDoList__form--newTask {
     flex-basis: 75%;
     flex-grow: 1;
@@ -76,21 +82,22 @@ body {
     margin: auto;
 }
 
-.list__tasks{
-    word-break: break-word;
-    flex-basis: 100%;
-}
-
-.list__tasks--done{
-    text-decoration: line-through;;
-}
-
 .list__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
     border-bottom: 1px solid #ccc;
     padding: 10px;
     align-items: center;
+}
+
+.list__task {
+    word-break: break-word;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.list__task--done {
+    text-decoration: line-through;
 }
 
 .list__button {
