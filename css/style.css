@@ -8,9 +8,13 @@ html {
 
 body {
     font-family: 'Mukta', sans-serif;
-    background-color: rgb(218, 213, 213);
-    padding: 20px;
-    margin: 5px;
+    background-color: rgba(218, 213, 213, 0.858);
+}
+
+.container{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 .header {
@@ -44,7 +48,7 @@ body {
 }
 
 .toDoList__form--newTask {
-    flex-basis: 400px;
+    flex-basis: 75%;
     flex-grow: 1;
     margin: 5px;
     border: 1px solid #ccc;
@@ -62,10 +66,13 @@ body {
     border-radius: 5px;
 }
 
-.toDoList__form--taskButton:hover{
+.toDoList__form--taskButton:hover {
     background-color: hsl(180, 100%, 30%);
 }
 
-.toDoList__tasks{
-
+.toDoList__tasks {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    list-style-type: none;
 }
