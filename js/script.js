@@ -1,6 +1,6 @@
 {
     const tasks = [
-        {
+       {
             content: "pojechać w góry",
             done: false,
         },
@@ -54,9 +54,9 @@
             <li 
             class="list__item${task.done ? " list__item--done" : ""}"
             >
-            <button class="js-done">zrobione?</button>
+            <button class="list__button list__button--done js-done">✔</button>
             ${task.content}
-            <button class="js-remove">usuń</button>
+            <button class="list__button list__button--remove js-remove">🗑</button>
             
             </li>
             `;
