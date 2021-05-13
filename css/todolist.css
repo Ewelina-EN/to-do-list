@@ -1,0 +1,43 @@
+.toDoList {
+    display: grid;
+    grid-template-rows: 2;
+    height: auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.toDoList__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+@media(max-width:767px) {
+    .toDoList__form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.toDoList__form--newTask {
+    flex-basis: 75%;
+    flex-grow: 1;
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.toDoList__form--taskButton {
+    flex-grow: 1;
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.toDoList__form--taskButton:hover {
+    background-color: hsl(180, 100%, 30%);
+}
