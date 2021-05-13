@@ -11,7 +11,7 @@ body {
     background-color: rgba(218, 213, 213, 0.858);
 }
 
-.container{
+.container {
     max-width: 600px;
     margin: 20px auto;
     padding: 0 20px;
@@ -70,9 +70,46 @@ body {
     background-color: hsl(180, 100%, 30%);
 }
 
-.toDoList__tasks {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+.list {
+    height: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.list__tasks {
+    word-break: break-word;
+    flex-basis: 100%;
+    padding: 0;
     list-style-type: none;
+}
+
+.list__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    align-items: center;
+}
+
+.list__button {
+    text-align: center;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.list__item--text{
+    word-break: break-all;
+}
+
+.list__button--done {
+    background-color: green;
+}
+
+.list__button--remove {
+    background-color: red;
 }
