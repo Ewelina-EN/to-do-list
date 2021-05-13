@@ -71,16 +71,18 @@ body {
 }
 
 .list {
-    height: auto;
     background-color: white;
-    padding: 20px;
+    padding: 10px;
+    margin: auto;
 }
 
-.list__tasks {
+.list__tasks{
     word-break: break-word;
     flex-basis: 100%;
-    padding: 0;
-    list-style-type: none;
+}
+
+.list__tasks--done{
+    text-decoration: line-through;;
 }
 
 .list__item {
@@ -93,17 +95,12 @@ body {
 
 .list__button {
     text-align: center;
-    padding: 5px;
     width: 25px;
     height: 25px;
     margin: 0 10px;
     border: none;
     color: white;
     font-size: 16px;
-}
-
-.list__item--text{
-    word-break: break-all;
 }
 
 .list__button--done {
