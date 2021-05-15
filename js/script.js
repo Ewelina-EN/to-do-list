@@ -2,6 +2,7 @@
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
+
         tasks.push({
             content: newTaskContent,
         });
@@ -10,6 +11,7 @@
     };
 
     const removeTask = (taskIndex) => {
+
         tasks.splice(taskIndex, 1);
         render();
     };
@@ -61,7 +63,9 @@
 
 
     const onFormSubmit = (event) => {
+
         event.preventDefault();
+
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
@@ -70,12 +74,13 @@
         }
 
         addNewTask(newTaskContent);
+        document.querySelector(".js-newTask").value = "";
     };
     const init = () => {
         render();
 
         const form = document.querySelector(".js-form");
-
+        
         form.addEventListener("submit", onFormSubmit);
     };
 
