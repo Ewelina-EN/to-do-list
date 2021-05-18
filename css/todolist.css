@@ -22,10 +22,9 @@
 .toDoList__form--newTask {
     flex-basis: 75%;
     flex-grow: 1;
-    margin: 5px;
+    margin: 10px;
     border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 10px;
 }
 
 .toDoList__form--taskButton {
@@ -33,9 +32,6 @@
     background-color: teal;
     color: white;
     border: none;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
 }
 
 .toDoList__form--taskButton:hover {

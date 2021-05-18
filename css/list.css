@@ -5,8 +5,6 @@
 }
 
 .list__item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
     border-bottom: 1px solid #ccc;
     padding: 10px;
     align-items: center;
