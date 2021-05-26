@@ -62,6 +62,20 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
+    const renderButtons = () => {
+        let htmlButtons = "Lista zadań";
+
+        for (const task of tasks) {
+            htmlButtons = ` Lista zadań
+            <button class="subHeader__button">Ukryj ukończone</button><button class="subHeader__button">Ukończ wszystkie</button>
+            `;
+        };
+        document.querySelector(".js-subHeader").innerHTML = htmlButtons;
+    };
+    const bindButtonsEvents = () => {
+
+    }; 
+
     const render = () => {
         renderTasks();
         renderButtons();
