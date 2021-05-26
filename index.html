@@ -20,8 +20,8 @@
 
 <body>
     <main class="container">
-        <h1 class="header">Lista zadań</h1>
-        <section class="section">
+        <h1>Lista zadań</h1>
+        <section>
             <h2 class="subHeader">Dodaj nowe zadanie</h2>
             <form class="form js-form">
                 <div class="toDoList__form">
@@ -29,11 +29,12 @@
                         autofocus>
                     <button class="toDoList__form--taskButton">Dodaj zadanie</button>
                 </div>
-
             </form>
         </section>
         <section>
-            <h2 class="subHeader">Lista zadań</h2>
+            <h2 class="subHeader">Lista zadań
+                <button class="subHeader__button">Ukryj ukończone</button> <button class="subHeader__button">Ukończ wszystkie</button>
+            </h2>
             <ul class="list js-tasks"></ul>
         </section>
     </main>
