@@ -27,6 +27,12 @@
         render();
     };
 
+    const makeAllTasksDone = () => {
+        tasks = tasks.map((task) => { return { content: task.content, done: true } });
+        render();
+    };
+
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -65,16 +71,22 @@
     const renderButtons = () => {
         let htmlButtons = "Lista zadań";
 
-        for (const task of tasks) {
+        if (tasks.length) {
             htmlButtons = ` Lista zadań
-            <button class="subHeader__button">Ukryj ukończone</button><button class="subHeader__button">Ukończ wszystkie</button>
+            <button class="subHeader__button js-hide">Ukryj ukończone</button><button class="subHeader__button js-makeAllDone">Ukończ wszystkie</button>
             `;
         };
         document.querySelector(".js-subHeader").innerHTML = htmlButtons;
     };
-    const bindButtonsEvents = () => {
 
-    }; 
+    const bindButtonsEvents = () => {
+        const makeAllTasksDoneButton = document.querySelector(".js-makeAllDone");
+        if (makeAllTasksDoneButton) {
+            makeAllTasksDoneButton.addEventListener("click", () => {
+                makeAllTasksDone();
+            });
+        };
+    };
 
     const render = () => {
         renderTasks();
@@ -83,8 +95,6 @@
         bindEvents();
         bindButtonsEvents();
     };
-
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();
