@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideTaskDone = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -73,7 +74,7 @@
 
         if (tasks.length) {
             htmlButtons = ` Lista zadań
-            <button class="subHeader__button js-hide">Ukryj ukończone</button><button class="subHeader__button js-makeAllDone">Ukończ wszystkie</button>
+            <button class="subHeader__button js-hide">Ukryj ukończone</button><button class="subHeader__button js-makeAllDone"${tasks.every((task => task.done)) ? "disabled" : "" }>Ukończ wszystkie</button>
             `;
         };
         document.querySelector(".js-subHeader").innerHTML = htmlButtons;

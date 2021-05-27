@@ -46,3 +46,8 @@ body {
 .subHeader__button:hover {
     color: hsl(180, 100%, 35%);
 }
+
+.subHeader__button:disabled {
+    color: #aaa;
+    cursor: default;
+}
