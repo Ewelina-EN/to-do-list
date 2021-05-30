@@ -1,6 +1,6 @@
 {
     let tasks = [];
-    let hideTaskDone = false;
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -33,6 +33,11 @@
         render();
     };
 
+    const toggleHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+    };
+
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -56,16 +61,20 @@
         let htmlString = "";
 
         for (const task of tasks) {
+            const hideTask = task.done & hideDoneTasks;
+
             htmlString += `
-        <li class="list__item">
-        <button class="list__button list__button--done js-done">
-        ${task.done ? "✔" : ""}</button>
-        <span class="list__task${task.done ? " list__task--done" : ""}">
-        ${task.content} </span>
-        <button class="list__button list__button--remove js-remove">🗑</button>
-        </li>
-        `;
+            <li class="list__item ${hideTask ? "hide" : ""}">
+            <button class="list__button list__button--done js-done">
+            ${task.done ? "✔" : ""}</button>
+            <span class="list__task${task.done ? " list__task--done" : ""}">
+            ${task.content} </span>
+            <button class="list__button list__button--remove js-remove">🗑</button>
+            </li>
+            `;
+
         }
+        console.log(hideDoneTasks);
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
@@ -74,10 +83,12 @@
 
         if (tasks.length) {
             htmlButtons = ` Lista zadań
-            <button class="subHeader__button js-hide">Ukryj ukończone</button><button class="subHeader__button js-makeAllDone"${tasks.every((task => task.done)) ? "disabled" : "" }>Ukończ wszystkie</button>
+            <button class="subHeader__button js-hideDoneTasks">
+            ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button><button class="subHeader__button js-makeAllDone" ${tasks.every((task => task.done)) ? "disabled" : ""}>Ukończ wszystkie</button>
             `;
         };
         document.querySelector(".js-subHeader").innerHTML = htmlButtons;
+
     };
 
     const bindButtonsEvents = () => {
@@ -85,6 +96,13 @@
         if (makeAllTasksDoneButton) {
             makeAllTasksDoneButton.addEventListener("click", () => {
                 makeAllTasksDone();
+            });
+        };
+
+        const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
+        if (hideDoneTasksButton) {
+            hideDoneTasksButton.addEventListener("click", () => {
+                toggleHideDoneTasks();
             });
         };
     };

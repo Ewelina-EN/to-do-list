@@ -51,3 +51,7 @@ body {
     color: #aaa;
     cursor: default;
 }
+
+.hide{
+    display: none !important;
+}
