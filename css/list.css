@@ -35,8 +35,18 @@
 
 .list__button--done {
     background-color: green;
+    transition: 1s;
+}
+
+.list__button--done:hover {
+    background-color: hsl(120, 100%, 40%);
 }
 
 .list__button--remove {
     background-color: red;
+    transition: 1s;
+}
+
+.list__button--remove:hover {
+    background-color:hsl(0, 100%, 75%);
 }
