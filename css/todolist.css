@@ -27,10 +27,12 @@
     padding: 10px;
     margin: 10px;
     border: none;
+    transition: 1s;
 }
 
 .toDoList__form--taskButton:hover {
     background-color: hsl(180, 100%, 30%);
+    transform: scale(1.1);
 }
 
 .toDoList__form--taskButton:active {
