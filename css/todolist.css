@@ -1,4 +1,4 @@
-.toDoList__form {
+.form {
     display: flex;
     background-color: white;
     flex-direction: row;
@@ -7,12 +7,12 @@
 }
 
 @media(max-width:767px) {
-    .toDoList__form {
+    .form {
         grid-template-columns: 1fr;
     }
 }
 
-.toDoList__form--newTask {
+.form__newTask {
     flex-basis: 75%;
     flex-grow: 1;
     margin: 10px;
@@ -20,7 +20,7 @@
     border: 1px solid #ccc;
 }
 
-.toDoList__form--taskButton {
+.form__taskButton {
     flex-grow: 1;
     background-color: teal;
     color: white;
@@ -28,13 +28,15 @@
     margin: 10px;
     border: none;
     transition: 1s;
+    cursor: pointer;
 }
 
-.toDoList__form--taskButton:hover {
+.form__taskButton:hover {
     background-color: hsl(180, 100%, 30%);
     transform: scale(1.1);
+    transition: 1s;
 }
 
-.toDoList__form--taskButton:active {
+.form__taskButton:active {
     background-color:  hsl(180, 100%, 35%);
 }
