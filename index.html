@@ -24,15 +24,16 @@
         <section>
             <h2 class="subHeader">Dodaj nowe zadanie</h2>
             <form class="form js-form">
-                <div class="toDoList__form">
-                    <input class="toDoList__form--newTask js-newTask" requires placeholder="Co jest do zrobienia?"
-                        autofocus>
-                    <button class="toDoList__form--taskButton">Dodaj zadanie</button>
-                </div>
+                <input class="form__newTask js-newTask" requires placeholder="Co jest do zrobienia?" autofocus>
+                <button class="form__taskButton">Dodaj zadanie</button>
             </form>
         </section>
         <section>
-            <h2 class="subHeader js-subHeader">Lista zadań</h2>
+            <header>
+                <h2 class="subHeader">Lista zadań
+                    <section class="js-subHeader"></section>
+                </h2>
+            </header>
             <ul class="list js-tasks"></ul>
         </section>
     </main>
