@@ -29,7 +29,7 @@
    };
 
    const makeAllTasksDone = () => {
-      tasks = tasks.map((task) => { content: task.content, done: true });
+      tasks = tasks.map((task) => { return { content: task.content, done: true }});
       render();
    };
 
